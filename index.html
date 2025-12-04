@@ -1,208 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnicoAR - App para Técnicos de Ar Condicionado</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
-            color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .logo-img {
-            width: 70px;
-            height: 70px;
-            background: white;
-            border-radius: 8px;
-            padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 6px;
-        }
-        nav { display: flex; gap: 30px; }
-        nav a { color: white; text-decoration: none; font-weight: 500; }
-        .hero {
-            background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero p { font-size: 18px; margin-bottom: 15px; opacity: 0.95; }
-        .cta-button {
-            display: inline-block;
-            background: #ff6b35;
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .cta-button:hover { background: #ff5520; }
-        .recursos { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-        .recursos h2 { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0052cc; }
-        .recursos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .recurso-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        .recurso-card:hover { transform: translateY(-8px); }
-        .recurso-icon { font-size: 48px; margin-bottom: 15px; }
-        .recurso-card h3 { color: #0052cc; margin-bottom: 10px; }
-        .screenshots { background: white; padding: 60px 20px; }
-        .screenshots h2 { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0052cc; }
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .screenshot {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            aspect-ratio: 9 / 16;
-        }
-        .screenshot img { width: 100%; height: 100%; object-fit: cover; }
-        .download {
-            background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .download h2 { font-size: 36px; margin-bottom: 15px; }
-        .download p { font-size: 16px; margin-bottom: 35px; }
-        .download-buttons { display: flex; gap: 20px; justify-content: center; }
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: #0052cc;
-            padding: 14px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TecnicoAR - App para Técnicos de Ar Condicionado</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 8px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    nav { display: flex; gap: 30px; }
+    nav a { color: white; text-decoration: none; font-weight: 500; }
+    .hero {
+      background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 18px; margin-bottom: 15px; opacity: 0.95; }
+    .cta-button {
+      display: inline-block;
+      background: #ff6b35;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+    .cta-button:hover { background: #ff5520; }
+    .recursos { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+    .recursos h2 { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0052cc; }
+    .recursos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .recurso-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .recurso-card:hover { transform: translateY(-8px); }
+    .recurso-icon { font-size: 48px; margin-bottom: 15px; }
+    .recurso-card h3 { color: #0052cc; margin-bottom: 10px; }
+    .screenshots { background: white; padding: 60px 20px; }
+    .screenshots h2 { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0052cc; }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .screenshot {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      aspect-ratio: 9 / 16;
+    }
+    .screenshot img { width: 100%; height: 100%; object-fit: cover; }
+    .download {
+      background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .download h2 { font-size: 36px; margin-bottom: 15px; }
+    .download p { font-size: 16px; margin-bottom: 35px; }
+    .download-buttons { display: flex; gap: 20px; justify-content: center; }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: #0052cc;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo-area">
-                <div class="logo-img">
-                    <img src="assets/img/logo%20nova%20app%20tecnico.png" alt="Logo TecnicoAR">
-                </div>
-            </div>
-            <nav>
-                <a href="#recursos">Recursos</a>
-                <a href="#screenshots">Galeria</a>
-                <a href="#download">Download</a>
-            </nav>
+  <header>
+    <div class="header-content">
+      <div class="logo-area">
+        <div class="logo-img">
+          <img src="assets/img/logo.nova.app.tecnico.jpg" alt="Logo TecnicoAR">
         </div>
-    </header>
+      </div>
+      <nav>
+        <a href="#recursos">Recursos</a>
+        <a href="#screenshots">Galeria</a>
+        <a href="#download">Download</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h1>TecnicoAR</h1>
-            <p>O aplicativo completo para técnicos de ar condicionado</p>
-            <p>Gerencie orçamentos, calcule BTU, diagnostique problemas e consulte códigos de erro em um único lugar</p>
-            <a href="#download" class="cta-button">Baixar Agora</a>
-        </div>
-    </section>
+  <section class="hero">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h1>TecnicoAR</h1>
+      <p>O aplicativo completo para técnicos de ar condicionado</p>
+      <p>Gerencie orçamentos, calcule BTU, diagnostique problemas e consulte códigos de erro em um único lugar</p>
+      <a href="#download" class="cta-button">Baixar Agora</a>
+    </div>
+  </section>
 
-    <section class="recursos" id="recursos">
-        <h2>Principais Recursos</h2>
-        <div class="recursos-grid">
-            <div class="recurso-card">
-                <div class="recurso-icon">📋</div>
-                <h3>Orçamentos</h3>
-                <p>Crie e gerencie orçamentos de forma rápida e profissional</p>
-            </div>
-            <div class="recurso-card">
-                <div class="recurso-icon">🧮</div>
-                <h3>Calculadora BTU</h3>
-                <p>Calcule a capacidade necessária do ar condicionado</p>
-            </div>
-            <div class="recurso-card">
-                <div class="recurso-icon">🔍</div>
-                <h3>Diagnóstico</h3>
-                <p>Ferramentas de diagnóstico para identificar problemas</p>
-            </div>
-            <div class="recurso-card">
-                <div class="recurso-icon">⚠️</div>
-                <h3>Códigos de Erro</h3>
-                <p>Consulte códigos de erro HVAC de todas as marcas</p>
-            </div>
-            <div class="recurso-card">
-                <div class="recurso-icon">📚</div>
-                <h3>Manuais Técnicos</h3>
-                <p>Biblioteca completa de manuais em português</p>
-            </div>
-            <div class="recurso-card">
-                <div class="recurso-icon">🔧</div>
-                <h3>PMOC HUB</h3>
-                <p>Manutenção preventiva e operacional contínua</p>
-            </div>
-        </div>
-    </section>
+  <section class="recursos" id="recursos">
+    <h2>Principais Recursos</h2>
+    <div class="recursos-grid">
+      <div class="recurso-card"><div class="recurso-icon">📋</div><h3>Orçamentos</h3><p>Crie e gerencie orçamentos de forma rápida e profissional</p></div>
+      <div class="recurso-card"><div class="recurso-icon">🧮</div><h3>Calculadora BTU</h3><p>Calcule a capacidade necessária do ar condicionado</p></div>
+      <div class="recurso-card"><div class="recurso-icon">🔍</div><h3>Diagnóstico</h3><p>Ferramentas de diagnóstico para identificar problemas</p></div>
+      <div class="recurso-card"><div class="recurso-icon">⚠️</div><h3>Códigos de Erro</h3><p>Consulte códigos de erro HVAC de todas as marcas</p></div>
+      <div class="recurso-card"><div class="recurso-icon">📚</div><h3>Manuais Técnicos</h3><p>Biblioteca completa de manuais em português</p></div>
+      <div class="recurso-card"><div class="recurso-icon">🔧</div><h3>PMOC HUB</h3><p>Manutenção preventiva e operacional contínua</p></div>
+    </div>
+  </section>
 
-    <section class="screenshots" id="screenshots">
-        <h2>Conheça o Aplicativo</h2>
-        <div class="screenshots-grid">
-            <div class="screenshot">
-                <img src="assets/img/app1.png" alt="Tela de Códigos de Erro">
-            </div>
-            <div class="screenshot">
-                <img src="assets/img/app2.png" alt="Tela de Manuais">
-            </div>
-            <div class="screenshot">
-                <img src="assets/img/app3.png" alt="Tela de Diagnóstico">
-            </div>
+  <section class="screenshots" id="screenshots">
+    <h2>Conheça o Aplicativo</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot"><img src="assets/img/cod.jpg" alt="Tela de Códigos de Erro"></div>
+      <div class="screenshot"><img src="assets/img/manual.jpg" alt="Tela de Manuais"></div>
+      <div class="screenshot"><img src="assets/img/pmoc.jpg" alt="Tela de Diagnóstico"></div>
+      <div class="screenshot"><img src="assets/img/1%20basbord.jpg" alt="Tela adicional"></div>
+    </div>
+  </section>
+
+  <section class="download" id="download">
+    <h2>Baixe o Aplicativo</h2>
+    <p>Disponível para Android. Em breve para iOS.</p>
+    <div class="download-buttons">
+      <a href="#" class="download-btn">
